@@ -1,391 +1,172 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Thabo Bhebhe — Performance Marketing & Content</title>
-  <meta name="description" content="Thabo Bhebhe — Performance marketing, content strategy and SEO. Data-driven growth systems, full-funnel paid acquisition and conversion-first copy." />
-  <!-- Open Graph -->
-  <meta property="og:title" content="Thabo Bhebhe — Performance Marketing & Content" />
-  <meta property="og:description" content="Data-driven growth systems: SEO, paid media, and conversion copy that tie to revenue." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/7/72/Thabo_Bhebhe_placeholder.png" />
-  <!-- Fav icon (replace with your own later) -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a0a0a'/%3E%3Ctext x='50' y='58' font-size='46' text-anchor='middle' fill='%23ffca28' font-family='Arial'%3ETB%3C/text%3E%3C/svg%3E" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Lora:wght@600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#070707;                /* deep charcoal */
-      --card:#0f1112;
-      --accent:#ffca28;            /* MTN yellow */
-      --accent-2:#00a3a8;          /* subtle secondary */
-      --muted:#9aa3ad;
-      --glass: rgba(255,255,255,0.03);
-      --max-width:1100px;
-      --rounded:14px;
-      --transition:240ms cubic-bezier(.2,.9,.3,1);
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;
-      background:linear-gradient(180deg,var(--bg),#040404 140%);
-      color:#eef3f6;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.45;
-      padding:40px 20px;
-      display:flex;
-      justify-content:center;
-      transition:background var(--transition);
-    }
-    .wrap{max-width:var(--max-width);width:100%;}
-
-    header{
-      display:flex;align-items:center;justify-content:space-between;margin-bottom:36px;gap:18px;
-    }
-    .brand{display:flex;gap:18px;align-items:center}
-    .logo{
-      width:64px;height:64px;border-radius:12px;
-      background:linear-gradient(135deg,var(--accent),#b38600);
-      display:flex;align-items:center;justify-content:center;font-weight:800;color:#071014;font-family:Lora;font-size:26px;
-      box-shadow:0 8px 28px rgba(0,0,0,0.6);
-      transform:translateY(0);
-      transition:transform var(--transition);
-    }
-    .logo:hover{transform:translateY(-4px) scale(1.02)}
-    h1{font-family:Lora, serif;font-size:20px;margin:0;color:#fff}
-    p.lead{margin:0;color:var(--muted);font-size:13px}
-
-    .contact{display:flex;gap:14px;align-items:center}
-    a.contact-link{color:var(--accent-2);text-decoration:none;font-weight:600;font-size:14px;border-radius:8px;padding:6px 8px}
-    a.contact-link:hover{opacity:0.9;transform:translateY(-2px);transition:var(--transition)}
-
-    .hero{display:grid;grid-template-columns:1fr 340px;gap:28px;align-items:stretch;margin-bottom:40px}
-    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);
-          border:1px solid rgba(255,255,255,0.03);
-          padding:28px;border-radius:var(--rounded);
-          box-shadow:0 12px 48px rgba(2,6,12,0.6);
-          overflow:hidden;
-          transform-origin:center;
-          transition:transform var(--transition), box-shadow var(--transition);
-    }
-    .card:hover{transform:translateY(-6px);box-shadow:0 20px 70px rgba(0,0,0,0.7)}
-
-    .hero-left h2{font-family:Lora;font-size:32px;margin:0 0 12px;color:#fff}
-    .hero-left p{color:var(--muted);margin-bottom:18px}
-
-    .badges{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
-    .badge{background:var(--glass);padding:8px 12px;border-radius:999px;font-weight:700;color:var(--accent);font-size:13px;border:1px solid rgba(255,255,255,0.02);backdrop-filter: blur(4px)}
-
-    .metrics{display:flex;gap:12px}
-    .metric{background:rgba(0,0,0,0.18);padding:12px;border-radius:8px;flex:1;text-align:center}
-    .metric strong{display:block;font-size:20px;color:var(--accent)}
-    .metric span{display:block;color:var(--muted);font-size:12px}
-
-    .hero-right .contact-card{display:flex;flex-direction:column;gap:8px}
-    .cta-btn{background:var(--accent);color:#071014;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:800;display:inline-block;box-shadow:0 6px 18px rgba(255,202,40,0.08);transition:transform var(--transition)}
-    .cta-btn:hover{transform:translateY(-3px)}
-
-    .section{margin-bottom:36px}
-    .section h3{font-family:Lora;margin:0 0 14px;color:#fff}
-    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .service{background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
-    .service h4{margin:0 0 8px;color:var(--accent)}
-    .service p{margin:0;color:var(--muted);font-size:14px}
-
-    .promoflo{display:grid;grid-template-columns:1fr 320px;gap:18px;align-items:stretch}
-    .pf-list{display:flex;flex-direction:column;gap:10px}
-    .pf-item{background:rgba(0,0,0,0.12);padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.02);transition:transform var(--transition)}
-    .pf-item:hover{transform:translateY(-4px)}
-
-    .case-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-    .case{padding:16px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);border:1px solid rgba(255,255,255,0.03)}
-    .case h4{margin:0 0 8px;color:#fff}
-    .case .role{font-size:13px;color:var(--muted);margin-bottom:8px}
-    .case ul{margin:0 0 10px 18px;color:var(--muted)}
-    .case .result{font-weight:700;color:var(--accent)}
-
-    .chips{display:flex;gap:8px;flex-wrap:wrap}
-    .chip{background:rgba(255,255,255,0.02);padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,0.02);font-weight:700;color:var(--muted);font-size:13px}
-
-    .logos{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-    .logo-sample{width:120px;height:44px;border-radius:8px;background:linear-gradient(90deg,rgba(255,255,255,0.02),transparent);display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:700}
-    .logo-img{height:36px;object-fit:contain;filter:brightness(1) contrast(1);}
-
-    footer{margin-top:20px;text-align:center}
-    footer p{color:var(--muted)}
-
-    .micro-note{font-size:13px;color:var(--muted)}
-
-    /* animations */
-    .fade-in { opacity: 0; transform: translateY(10px); animation: fadeInUp .6s forwards; }
-    .fade-in.delay-1{ animation-delay: .08s }
-    .fade-in.delay-2{ animation-delay: .16s }
-    .fade-in.delay-3{ animation-delay: .24s }
-    @keyframes fadeInUp { to { opacity:1; transform: translateY(0); } }
-
-    .show-more{background:transparent;border:1px dashed rgba(255,255,255,0.03);padding:8px;border-radius:8px;color:var(--accent);display:inline-block;text-decoration:none}
-
-    a { color: var(--accent-2) }
-
-    @media (max-width:980px){
-      .hero{grid-template-columns:1fr}
-      .services-grid{grid-template-columns:repeat(2,1fr)}
-      .case-grid{grid-template-columns:1fr}
-      .promoflo{grid-template-columns:1fr}
-    }
-    @media (max-width:640px){
-      .services-grid{grid-template-columns:1fr}
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thabo Bhebhe — Performance Marketing & Content</title>
+<meta name="description" content="Thabo Bhebhe — Performance marketing, content strategy and SEO. Data-driven growth systems, full-funnel paid acquisition and conversion-first copy.">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F9F9F9;
+    --card:#FFFFFF;
+    --primary:#1C1C1C;
+    --accent:#0A7C7B;
+    --secondary:#5A5A5A;
+    --rounded:12px;
+    --transition:0.3s ease;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Inter, sans-serif;background:var(--bg);color:var(--primary);line-height:1.6;overflow-x:hidden;}
+  a{text-decoration:none;color:var(--accent);}
+  .wrap{max-width:1100px;margin:0 auto;padding:40px 20px;}
+  header{display:flex;justify-content:space-between;align-items:center;margin-bottom:50px;}
+  .logo{font-family:Lora, serif;font-size:28px;font-weight:700;color:var(--accent);}
+  nav a{margin-left:20px;font-weight:600;color:var(--secondary);}
+  nav a:hover{color:var(--accent);}
+  .hero{display:flex;flex-wrap:wrap;gap:30px;margin-bottom:60px;align-items:center;}
+  .hero-left{flex:1;min-width:300px;opacity:0;transform:translateY(20px);animation:fadeInUp 0.8s forwards;}
+  .hero-left h1{font-family:Lora, serif;font-size:36px;margin-bottom:16px;color:var(--primary);}
+  .hero-left p{color:var(--secondary);font-size:16px;margin-bottom:24px;}
+  .cta-btn{display:inline-block;padding:14px 24px;background:var(--accent);color:#fff;font-weight:700;border-radius:8px;transition:transform var(--transition);}
+  .cta-btn:hover{transform:scale(1.05);}
+  .section{margin-bottom:60px;opacity:0;transform:translateY(20px);animation:fadeInUp 0.8s forwards;}
+  .section h2, .section h3{font-family:Lora, serif;margin-bottom:20px;color:var(--primary);}
+  .case-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;}
+  .case{background:var(--card);padding:24px;border-radius:var(--rounded);box-shadow:0 6px 20px rgba(0,0,0,0.08);transition:transform var(--transition);}
+  .case:hover{transform:translateY(-6px);}
+  .case h4{margin-bottom:12px;color:var(--accent);}
+  .case .role{font-size:14px;color:var(--secondary);margin-bottom:12px;}
+  .case ul{margin-left:18px;color:var(--secondary);margin-bottom:12px;}
+  .case .result{font-weight:700;color:var(--accent);}
+  .logos{display:flex;flex-wrap:wrap;gap:16px;align-items:center;}
+  .logo-img{height:36px;object-fit:contain;filter:brightness(1) contrast(1);transition:transform var(--transition);}
+  .logo-img:hover{transform:scale(1.05);}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px;}
+  .chip{background:#E8F1F2;padding:6px 12px;border-radius:999px;color:var(--accent);font-weight:600;font-size:13px;}
+  footer{margin-top:40px;text-align:center;color:var(--secondary);}
+  @keyframes fadeInUp{to{opacity:1;transform:translateY(0);}}
+  @media(max-width:768px){.hero{flex-direction:column;}}
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <header class="fade-in">
-      <div class="brand">
-        <div class="logo">TB</div>
-        <div>
-          <h1>Thabo Bhebhe</h1>
-          <p class="lead">Performance Marketing • SEO • Content Strategy — Turning traffic into predictable pipeline</p>
-        </div>
-      </div>
-      <div class="contact">
-        <a class="contact-link" href="mailto:thabobhebhe@aol.com">Email</a>
-        <a class="contact-link" href="https://linkedin.com/in/thabobhebhe" target="_blank">LinkedIn</a>
-      </div>
-    </header>
+<div class="wrap">
+  <header>
+    <div class="logo">Thabo Bhebhe</div>
+    <nav>
+      <a href="#case-studies">Case Studies</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <section class="hero">
-      <div class="card hero-left fade-in delay-1">
-        <h2>Strategic marketing that ties content, SEO and paid media to revenue</h2>
-        <p>I build and run data-driven growth systems for SaaS, B2B tech and consumer brands — combining technical SEO, conversion-led content and full-funnel paid acquisition to deliver measurable ROI.</p>
+  <section class="hero">
+    <div class="hero-left">
+      <h1>Strategic Growth & Data-Driven Marketing</h1>
+      <p>I create performance marketing, SEO, and conversion-focused content that drives measurable growth for SaaS, B2B, and consumer brands.</p>
+      <a class="cta-btn" href="mailto:thabobhebhe@aol.com?subject=Portfolio Inquiry">Book a Free Growth Audit</a>
+    </div>
+  </section>
 
-        <div class="badges">
-          <div class="badge">10+ years</div>
-          <div class="badge">GA4 • Ahrefs • SEMrush</div>
-          <div class="badge">HubSpot Certified</div>
-        </div>
-
-        <div class="metrics" aria-hidden>
-          <div class="metric"><strong>120%</strong><span>Avg organic growth (18 months)</span></div>
-          <div class="metric"><strong>4x</strong><span>Avg PPC ROI</span></div>
-          <div class="metric"><strong>85%</strong><span>Social engagement lift</span></div>
-        </div>
-
-        <div style="margin-top:18px">
-          <a class="cta-btn" href="mailto:thabobhebhe@aol.com?subject=Portfolio inquiry - Free Growth Audit">Book a Free Growth Audit</a>
-          <a class="show-more" href="#case-studies" style="margin-left:12px">See case studies ↓</a>
-        </div>
+  <section id="case-studies" class="section" style="animation-delay:0.2s">
+    <h2>Featured Case Studies</h2>
+    <div class="case-grid">
+      <!-- Promoflo -->
+      <div class="case">
+        <h4>Promoflo — Content & Campaign Copy (Selected)</h4>
+        <div class="role">Service pages, campaign flows, conversion-first copy</div>
+        <ul>
+          <li>Deal Swiper — gamified deal discovery to drive engagement & purchases</li>
+          <li>Predict & Win — repeat visits and loyalty campaigns</li>
+          <li>UGC Campaigns — authentic social proof & remarketing growth</li>
+        </ul>
+        <div class="result">Sample outputs: service pages, campaign flows, benefit copy, FAQs, SEO metadata. <a href="https://www.promoflo.com/index/advertiser-blog-home" target="_blank">View live pages</a></div>
       </div>
 
-      <aside class="card hero-right fade-in delay-2">
-        <div class="contact-card">
-          <strong style="color:#fff">Quick Snapshot</strong>
-          <span style="color:var(--muted)">Services: Paid Media • SEO • Content • Lead Gen</span>
-          <span style="color:var(--muted);font-size:13px">Typical client budget: R50k — R500k+ / month</span>
-
-          <div style="margin-top:12px">
-            <a class="cta-btn" href="mailto:thabobhebhe@aol.com?subject=Book a call">Engage Thabo</a>
-          </div>
-        </div>
-      </aside>
-    </section>
-
-    <section class="section fade-in delay-3">
-      <h3>What I Do — Service Pillars</h3>
-      <div class="services-grid">
-        <div class="service">
-          <h4>Paid Media & Lead Gen</h4>
-          <p>Strategic full-funnel campaigns across Google, Meta and LinkedIn with rigorous testing and CRO built into every step — focused on lowering CPA and scaling pipeline.</p>
-        </div>
-        <div class="service">
-          <h4>Technical & Local SEO</h4>
-          <p>Comprehensive audits, crawl fixes, schema, site architecture and on-page optimisation to unlock compounding organic growth for B2B and e-commerce sites.</p>
-        </div>
-        <div class="service">
-          <h4>Content Strategy & Copy</h4>
-          <p>SEO-first long-form content, product & landing-page copy, and short-form social copy that converts and builds brand authority. Experienced in transforming social content into news and case studies for corporate brands (e.g., Coca-Cola PenBev, MTNmore).</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section promoflo fade-in">
-      <div class="card">
-        <h3 style="margin-top:0">Promoflo — Content & Campaign Copy (Selected)</h3>
-        <p style="color:var(--muted)">Concise outputs to support product adoption and commercial pitches: service pages, campaign flows, and conversion-first benefit copy.</p>
-
-        <div class="pf-list" style="margin-top:12px">
-          <div class="pf-item">
-            <h5>Deal Swiper</h5>
-            <p>Gamified deal discovery — increases session time and drive-to-purchase via integrated purchase links and social sharing.</p>
-          </div>
-
-          <div class="pf-item">
-            <h5>Predict & Win</h5>
-            <p>Prediction games to drive repeat visits and loyalty for sports and entertainment advertisers.</p>
-          </div>
-
-          <div class="pf-item">
-            <h5>UGC Campaigns</h5>
-            <p>User-generated content mechanics that fuel authentic social proof and referral growth while capturing first-party data for remarketing.</p>
-          </div>
-        </div>
-
-        <p style="margin-top:12px;color:var(--muted)">Sample outputs: service pages, campaign flows, benefit copy, FAQs and SEO metadata. <a href="https://www.promoflo.com/index/advertiser-blog-home" target="_blank" rel="noopener">View live pages</a></p>
-      </div>
-
-      <div class="card">
-        <h4 style="margin-top:0;color:var(--accent)">Why this matters</h4>
-        <p style="color:var(--muted)">MarTech & engagement platforms need clear product storytelling to convert advertisers and partners. My copy clarifies commercial value, aligns with search intent, and supports conversion funnels — reducing friction between discovery and paid adoption.</p>
-
-        <div style="margin-top:16px">
-          <a class="cta-btn" href="mailto:thabobhebhe@aol.com?subject=Promoflo copy - case study">Request Promoflo Case Notes</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="case-studies" class="section fade-in">
-      <h3>Featured Case Studies</h3>
-      <div class="case-grid">
-
-        <article class="case card">
-          <h4>Out of the Box Ideas — Organic Growth</h4>
-          <div class="role">Role: SEO & Content Lead — Long-form pillar content, on-page SEO</div>
-          <ul>
-            <li>Wrote and optimised long-form e-commerce pillar content (2,000+ words)</li>
-            <li>Resolved keyword cannibalisation and improved internal linking</li>
+      <!-- MTNmore -->
+      <div class="case">
+        <h4>MTNmore — Consumer Engagement Case Studies</h4>
+        <div class="role">Case study & content writing for MTNmore campaigns</div>
+        <ul>
+          <li>Produced SEO-friendly case studies showcasing campaign outcomes & creative mechanics</li>
+          <li>Transformed short-form social copy into blog posts and thought leadership content</li>
+        </ul>
+        <div class="result">
+          Examples:
+          <ul style="margin-top:8px;color:var(--secondary)">
+            <li><strong>Shell Valentines Promo</strong> — Spin & Win, surprise & delight customers</li>
+            <li><strong>Jude Color — Women's Month Promotion</strong> — 7.1% CTR, 125 conversions</li>
+            <li><strong>Royal Suites Hotel — Valentines Promo</strong> — 8,299 opt-ins, 413 valid leads</li>
+            <li><strong>Fresh Minute Maid — Student Engagement</strong> — campus community-building</li>
+            <li><strong>UMCAT Youth Promotion</strong> — 400+ leads in 5 days</li>
+            <li><strong>Unilever Home — Event Gamification</strong> — Spin-to-Win activation</li>
           </ul>
-          <div class="result">Result: +120% organic traffic over 18 months; multiple #1 and Top-5 keyword rankings. <a href="https://www.outoftheboxideas.co.za" target="_blank" rel="noopener">outoftheboxideas.co.za</a></div>
-        </article>
-
-        <article class="case card">
-          <h4>Internet Express — Paid Acquisition (2016–2019)</h4>
-          <div class="role">Role: Paid Media Strategist — Google & Facebook Ads</div>
-          <ul>
-            <li>Full-funnel campaigns focused on conversion optimisation and audience layering</li>
-            <li>Structured retargeting flows tied to dynamic offers and promos</li>
-          </ul>
-          <div class="result">Result (2016–2019): 4x ROI, −38% CPA, +220% form conversions on R250k monthly budgets</div>
-        </article>
-
-        <article class="case card">
-          <h4>Varibox — Technical Content & Linkbuilding</h4>
-          <div class="role">Role: Technical Content & Outreach</div>
-          <ul>
-            <li>Created compliance, safety and technical blog articles targeting niche industrial keywords</li>
-            <li>Secured niche backlinks via trade publications and partner content</li>
-          </ul>
-          <div class="result">Result: Improved organic impressions and backlink quality; increased targeted leads from organic channels</div>
-        </article>
-
-        <article class="case card">
-          <h4>Coca-Cola PenBev — News & Social Content</h4>
-          <div class="role">Role: Content & Copywriting — News updates, social-to-news repurposing</div>
-          <ul>
-            <li>Write timely news articles on the latest developments in the beverage sector for Coca-Cola PenBev’s news portal</li>
-            <li>Repurpose social media copy into engaging news content, ensuring brand voice consistency and SEO alignment</li>
-            <li>Collaborate with marketing teams to highlight product campaigns and sustainability initiatives</li>
-          </ul>
-          <div class="result">Result: Strengthened on-site authority and engagement; improved audience retention through timely, high-quality copy</div>
-        </article>
-
-        <article class="case card">
-          <h4>MTNmore — Consumer Engagement Case Studies & Content</h4>
-          <div class="role">Role: Case Study & Content Writer — MTNmore insights and campaign writeups</div>
-          <ul>
-            <li>Produced case study writeups and thought pieces showcasing campaign outcomes and creative mechanics for MTNmore clients.</li>
-            <li>Transformed campaign results and short-form social copy into SEO-friendly case studies and blog posts.</li>
-          </ul>
-          <div class="result">
-            <strong>Examples (MTNmore case studies)</strong>
-            <ul style="margin:8px 0 0 18px;color:var(--muted)">
-              <li><strong>Shell Valentines Promo</strong> — Tue, Jan 2, 2025 — Spin & Win mechanic to surprise & delight customers.</li>
-              <li><strong>Jude Color — Women's Month Promotion</strong> — Tue, Jan 2, 2025 — 7.1% CTR, 125 conversions, community growth.</li>
-              <li><strong>The Royal Suites Hotel — Valentines Promo</strong> — Tue, Jan 2, 2025 — 8,299 opt-ins, 413 valid leads, 4.2% CTR.</li>
-              <li><strong>Fresh Minute Maid — Student Engagement</strong> — Tue, Jan 2, 2025 — Campus community-building and retargeting pool growth.</li>
-              <li><strong>UMCAT Youth Promotion</strong> — Tue, Jan 2, 2025 — 400+ leads in 5 days for course enrolment.</li>
-              <li><strong>Unilever Home — Event Gamification</strong> — Tue, Jan 2, 2025 — Spin-to-Win activation to drive event engagement.</li>
-            </ul>
-            <div style="margin-top:8px;color:var(--muted)">Read more and explore MTNmore's platform journeys on the MTNmore site.</div>
-          </div>
-        </article>
-
-        <article class="case card">
-          <h4>ClickPulse — Technical SEO & LinkedIn Ads</h4>
-          <div class="role">Role: Technical SEO & B2B Paid Media</div>
-          <ul>
-            <li>Technical site audits, schema, crawl optimisation</li>
-            <li>LinkedIn lead-gen campaigns targeting senior decision-makers</li>
-          </ul>
-          <div class="result">Result: Stronger SERP presence for technical queries and qualified MQLs from LinkedIn campaigns</div>
-        </article>
-
-      </div>
-
-      <!-- MTN Ads Business Directory micro-section -->
-      <div style="margin-top:16px" class="card">
-        <h4 style="margin-top:0">MTN Ads Business Directory — Content Moderation & Platform Oversight</h4>
-        <p style="color:var(--muted)">I moderate the MTN Ads business directory — ensuring business listings meet content standards, optimising descriptions for discoverability, and maintaining quality metadata across the platform.</p>
-        <p style="color:var(--muted);margin-top:8px">Directory example: <a href="https://mtnads.mtnmore.com/index/business-directory_advanced_search" target="_blank" rel="noopener">MTN Ads — Business Directory (advanced search)</a></p>
-      </div>
-
-    </section>
-
-    <section class="section">
-      <h3>Skills, Tools & Certifications</h3>
-      <div style="margin:12px 0 18px" class="chips">
-        <div class="chip">GA4 & Analytics</div>
-        <div class="chip">Ahrefs • SEMrush</div>
-        <div class="chip">HubSpot • CMS</div>
-        <div class="chip">Google Ads • Meta • LinkedIn</div>
-        <div class="chip">Schema & Technical SEO</div>
-        <div class="chip">Conversion Copywriting (CRO)</div>
-      </div>
-
-      <div class="card" style="padding:14px;margin-top:8px">
-        <h4 style="margin:0 0 8px">Client Logos & Partnerships</h4>
-        <div class="logos" style="margin-top:8px">
-          <!-- Public logo sources (replace with own assets if preferred) -->
-          <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/Coca-Cola_logo.svg" alt="Coca-Cola PenBev" class="logo-img" style="height:28px" />
-          <img src="https://mtn.co.za/wp-content/themes/mtn/images/logo.svg" alt="MTNmore / MTN" class="logo-img" style="height:28px" />
-          <img src="https://www.promoflo.com/assets/images/logo.png" alt="Promoflo" class="logo-img" style="height:28px" onerror="this.style.display='inline-block'; this.parentNode.querySelector('.logo-sample-promoflo').style.display='flex'"/>
-          <div class="logo-sample logo-sample-promoflo" style="display:none">Promoflo</div>
-          <img src="https://www.internetexpress.co.za/wp-content/uploads/2020/06/internet-express-logo.png" alt="Internet Express" class="logo-img" style="height:28px" onerror="this.style.display='none'"/>
-          <img src="https://www.varibox.co.za/wp-content/uploads/2017/12/varibox-logo.svg" alt="Varibox" class="logo-img" style="height:28px" onerror="this.style.display='none'"/>
-          <img src="https://www.outoftheboxideas.co.za/wp-content/uploads/2023/04/logo.png" alt="Out of the Box Ideas" class="logo-img" style="height:28px" onerror="this.style.display='none'"/>
-          <img src="https://clickpulse.example.com/logo.svg" alt="ClickPulse" class="logo-img" style="height:28px" onerror="this.style.display='none'"/>
-        </div>
-        <p class="micro-note" style="margin-top:8px">Logos used for demo purposes — replace these with your high-res originals for production hosting.</p>
-      </div>
-    </section>
-
-    <footer>
-      <div class="card" style="max-width:720px;margin:0 auto">
-        <h3 style="margin-top:0">Ready to grow your traffic, leads and revenue?</h3>
-        <p style="color:var(--muted)">I offer focused audits, campaign builds and retained growth partnerships. Book a free growth audit and I'll deliver a concise action plan you can implement immediately.</p>
-        <div style="margin-top:12px">
-          <a class="cta-btn" href="mailto:thabobhebhe@aol.com?subject=Free Growth Audit">Book a Free Growth Audit</a>
-          <a class="show-more" href="/Thabo_Bhebhe_Portfolio.pdf" style="margin-left:12px">Download PDF</a>
         </div>
       </div>
-      <p style="margin-top:12px;color:var(--muted);font-size:13px">© Thabo Bhebhe — Performance Marketing • Johannesburg</p>
-    </footer>
-  </div>
 
-  <!-- Small script to lazy-fallback logos and add simple accessible behaviour -->
-  <script>
-    // Fallback: if images 404, show text placeholders (some handled inline with onerror)
-    document.querySelectorAll('.logo-img').forEach(img => {
-      img.addEventListener('error', () => {
-        img.style.display = 'none';
-        const placeholder = document.createElement('div');
-        placeholder.className = 'logo-sample';
-        placeholder.textContent = img.alt.split(' ')[0] || 'Logo';
-        img.parentNode.appendChild(placeholder);
-      });
+      <!-- Out of the Box -->
+      <div class="case">
+        <h4>Out of the Box Ideas — Organic Growth</h4>
+        <div class="role">SEO & Content Lead</div>
+        <ul>
+          <li>Optimized 2,000+ word e-commerce pillar content</li>
+          <li>Resolved keyword cannibalization and improved internal linking</li>
+        </ul>
+        <div class="result">+120% organic traffic over 18 months; multiple #1 and Top-5 keyword rankings. <a href="https://www.outoftheboxideas.co.za" target="_blank">outoftheboxideas.co.za</a></div>
+      </div>
+    </div>
+
+    <!-- MTN Ads Business Directory -->
+    <div class="case" style="margin-top:20px">
+      <h4>MTN Ads Business Directory — Content Moderation</h4>
+      <p>I moderate the MTN Ads business directory — ensuring listings meet content standards, optimising descriptions, and maintaining metadata.</p>
+      <p>Directory example: <a href="https://mtnads.mtnmore.com/index/business-directory_advanced_search" target="_blank">View Business Directory</a></p>
+    </div>
+  </section>
+
+  <section id="skills" class="section" style="animation-delay:0.4s">
+    <h2>Skills & Tools</h2>
+    <div class="chips">
+      <div class="chip">GA4 & Analytics</div>
+      <div class="chip">Ahrefs • SEMrush</div>
+      <div class="chip">HubSpot • CMS</div>
+      <div class="chip">Google Ads • Meta • LinkedIn</div>
+      <div class="chip">Schema & Technical SEO</div>
+      <div class="chip">Conversion Copywriting (CRO)</div>
+    </div>
+    <h3>Clients & Partnerships</h3>
+    <div class="logos">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/Coca-Cola_logo.svg" alt="Coca-Cola PenBev" class="logo-img">
+      <img src="https://mtn.co.za/wp-content/themes/mtn/images/logo.svg" alt="MTNmore" class="logo-img">
+      <img src="https://www.promoflo.com/assets/images/logo.png" alt="Promoflo" class="logo-img">
+      <img src="https://www.internetexpress.co.za/wp-content/uploads/2020/06/internet-express-logo.png" alt="Internet Express" class="logo-img">
+      <img src="https://www.outoftheboxideas.co.za/wp-content/uploads/2023/04/logo.png" alt="Out of the Box Ideas" class="logo-img">
+    </div>
+  </section>
+
+  <footer id="contact">
+    <h2>Let's Grow Your Business</h2>
+    <p>I offer focused audits, campaign builds, and retained growth partnerships. Get a concise action plan you can implement immediately.</p>
+    <a class="cta-btn" href="mailto:thabobhebhe@aol.com?subject=Free Growth Audit">Book a Free Growth Audit</a>
+    <p style="margin-top:12px;color:var(--secondary);font-size:13px">© Thabo Bhebhe — Performance Marketing • Johannesburg</p>
+  </footer>
+</div>
+
+<script>
+  // Scroll fade-in animations
+  const faders = document.querySelectorAll('.section, .hero-left');
+  const options = {threshold:0.2};
+  const appearOnScroll = new IntersectionObserver(function(entries, observer){
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.style.opacity='1';
+        entry.target.style.transform='translateY(0)';
+        observer.unobserve(entry.target);
+      }
     });
-  </script>
+  }, options);
+  faders.forEach(fader=>appearOnScroll.observe(fader));
+</script>
 </body>
 </html>
