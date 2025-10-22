@@ -2,266 +2,310 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Thabo Bhebhe — Performance Marketing & Content</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Lora:wght@600;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thabo Bhebhe — Performance Marketing & Content Strategy</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bg:#0f111f;
-  --card:#1b1f34;
-  --accent:#00a3a8;
-  --accent2:#f5a623;
-  --muted:#98a0b3;
-  --glass: rgba(255,255,255,0.03);
-  --max-width:1200px;
+:root{
+  --bg:#f7f8fa;
+  --card:#ffffff;
+  --accent:#0077b6;
+  --accent-light:#0096c7;
+  --muted:#666666;
+  --max-width:1100px;
 }
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;height:100%;font-family:Inter,system-ui,sans-serif;color:#e8eef8;background:linear-gradient(180deg,var(--bg),#061022 120%);}
-body{display:flex;justify-content:center;padding:40px 20px;}
-.wrap{max-width:var(--max-width);width:100%}
-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:36px;flex-wrap:wrap}
-.brand{display:flex;gap:18px;align-items:center}
-.logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--card));display:flex;justify-content:center;align-items:center;font-family:Lora;font-weight:800;font-size:26px;color:#021426;box-shadow:0 6px 24px rgba(0,0,0,0.6);}
-header h1{margin:0;font-family:Lora,serif;font-size:20px;}
-header p.lead{margin:0;font-size:13px;color:var(--muted);}
-.contact{display:flex;gap:14px;align-items:center}
-.contact-link{color:var(--accent);text-decoration:none;font-weight:600;font-size:14px}
+*{box-sizing:border-box;}
+html, body{height:100%; margin:0; font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; background:var(--bg); color:#222;}
+.wrap{max-width:var(--max-width); width:100%; margin:0 auto; padding:40px 20px;}
+header{display:flex; justify-content:space-between; align-items:center; margin-bottom:36px;}
+.brand{display:flex; gap:18px; align-items:center;}
+.logo{width:64px; height:64px; border-radius:12px; background:var(--accent); display:flex; align-items:center; justify-content:center; font-weight:800; color:#fff; font-family:Lora; font-size:26px; box-shadow:0 4px 16px rgba(0,0,0,0.2);}
+h1{font-family:Lora, serif; font-size:20px; margin:0;}
+p.lead{margin:0; color:var(--muted); font-size:13px;}
+.contact{display:flex; gap:14px; align-items:center;}
+a.contact-link{color:var(--accent); text-decoration:none; font-weight:600; font-size:14px;}
 
-.hero{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-bottom:40px}
-.card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border:1px solid var(--glass);padding:28px;border-radius:14px;box-shadow:0 8px 40px rgba(2,6,12,0.6);opacity:0;transform:translateY(20px);transition:all 0.8s ease-out;}
-.fade-in{opacity:1;transform:translateY(0);}
-.hero-left h2{font-family:Lora;font-size:32px;margin:0 0 12px;}
-.hero-left p{margin-bottom:18px;color:var(--muted);}
-.badges{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
-.badge{background:var(--glass);padding:8px 12px;border-radius:999px;font-weight:700;color:var(--accent);font-size:13px;border:1px solid rgba(255,255,255,0.03);}
-.metrics{display:flex;gap:12px;margin-bottom:12px;}
-.metric{background:rgba(255,255,255,0.02);padding:12px;border-radius:8px;flex:1;text-align:center;}
-.metric strong{display:block;font-size:20px;color:var(--accent2);}
-.metric span{display:block;color:var(--muted);font-size:12px;}
-
-.cta-btn{background:var(--accent2);color:#071430;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:800;display:inline-block;margin-top:12px;}
-.show-more{background:transparent;border:1px dashed var(--glass);padding:8px;border-radius:8px;color:var(--accent);display:inline-block;text-decoration:none;margin-left:12px;}
-
+.hero{display:grid; grid-template-columns:1fr 320px; gap:28px; align-items:stretch; margin-bottom:40px;}
+.card{background:var(--card); padding:28px; border-radius:14px; box-shadow:0 4px 20px rgba(0,0,0,0.08); opacity:0; transform: translateY(20px); transition: all 0.6s ease-in-out;}
+.card.visible{opacity:1; transform: translateY(0);}
+.hero-left h2{font-family:Lora; font-size:32px; margin:0 0 12px; color:#222;}
+.hero-left p{color:var(--muted); margin-bottom:18px;}
+.badges{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:18px;}
+.badge{background:#e3f2fd; padding:8px 12px; border-radius:999px; font-weight:700; color:var(--accent); font-size:13px;}
+.metrics{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px;}
+.metric{background:#f1f5f9; padding:16px; border-radius:12px; flex:1; text-align:center;}
+.metric strong{display:block; font-size:22px; color:var(--accent);}
+.metric span{display:block; color:var(--muted); font-size:13px;}
+.hero-right .contact-card{display:flex; flex-direction:column; gap:8px;}
+.cta-btn{background:var(--accent); color:#fff; padding:12px 18px; border-radius:10px; text-decoration:none; font-weight:700; display:inline-block; transition: background 0.3s;}
+.cta-btn:hover{background:var(--accent-light);}
 .section{margin-bottom:36px;}
-.section h3{font-family:Lora;margin-bottom:14px;color:#fff;}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
-.service{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:12px;border:1px solid var(--glass);}
-.service h4{margin:0 0 8px;color:var(--accent);}
-.service p{margin:0;color:var(--muted);font-size:14px;}
+.section h3{font-family:Lora; margin:0 0 14px; color:#222;}
+.services-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px;}
+.service{background:#f1f5f9; padding:18px; border-radius:12px;}
+.service h4{margin:0 0 8px; color:var(--accent);}
+.service p{margin:0; color:var(--muted); font-size:14px;}
+.case-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:14px;}
+.case{padding:16px; border-radius:12px; background:#f1f5f9; cursor:pointer; transition:all 0.3s;}
+.case:hover{background:#e0f0ff;}
+.case h4{margin:0 0 8px; color:#222;}
+.case .role{font-size:13px; color:var(--muted); margin-bottom:8px;}
+.case ul{margin:0 0 10px 18px; color:var(--muted);}
+.case .result{font-weight:700; color:var(--accent);}
+.chips{display:flex; gap:8px; flex-wrap:wrap;}
+.chip{background:#e3f2fd; padding:8px 12px; border-radius:999px; font-weight:700; color:var(--accent); font-size:13px;}
 
-.promoflo{display:grid;grid-template-columns:1fr 320px;gap:18px;}
-.pf-list{display:flex;flex-direction:column;gap:10px;}
-.pf-item{background:rgba(0,0,0,0.18);padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.02);}
-.pf-item h5{margin:0 0 6px;color:var(--accent);}
-.pf-item p{margin:0;color:var(--muted);font-size:13px;}
+.tabs{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px;}
+.tab{padding:8px 14px; border-radius:12px; background:#e3f2fd; cursor:pointer; font-weight:700; color:var(--accent);}
+.tab.active{background:var(--accent); color:#fff;}
+.tab-content{background:#ffffff; border-radius:12px; padding:16px; box-shadow:0 4px 16px rgba(0,0,0,0.08);}
+.tab-content.hidden{display:none;}
 
-.case-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
-.case h4{margin:0 0 8px;color:#fff;}
-.case .role{font-size:13px;color:var(--muted);margin-bottom:8px;}
-.case ul{margin:0 0 10px 18px;color:var(--muted);}
-.case .result{font-weight:700;color:var(--accent2);}
+footer{text-align:center; margin-top:20px; font-size:13px; color:var(--muted);}
 
-.chips{display:flex;gap:8px;flex-wrap:wrap;}
-.chip{background:rgba(255,255,255,0.02);padding:8px 12px;border-radius:999px;border:1px solid var(--glass);font-weight:700;color:var(--muted);font-size:13px;}
-
-.logos{display:flex;gap:12px;flex-wrap:wrap;}
-.logo-sample{width:120px;height:44px;border-radius:8px;background:linear-gradient(90deg,rgba(255,255,255,0.02),transparent);display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:700;}
-
-footer{margin-top:20px;text-align:center;color:var(--muted);font-size:13px;}
-
-@media(max-width:980px){.hero{grid-template-columns:1fr}.services-grid{grid-template-columns:repeat(2,1fr)}.case-grid{grid-template-columns:1fr}.promoflo{grid-template-columns:1fr}}
-@media(max-width:640px){.services-grid{grid-template-columns:1fr}}
+@media (max-width:980px){
+  .hero{grid-template-columns:1fr;}
+  .services-grid{grid-template-columns:repeat(2,1fr);}
+  .case-grid{grid-template-columns:1fr;}
+}
+@media (max-width:640px){
+  .services-grid{grid-template-columns:1fr;}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
-
-<header>
-  <div class="brand">
-    <div class="logo">TB</div>
-    <div>
-      <h1>Thabo Bhebhe</h1>
-      <p class="lead">Performance Marketing • SEO • Content Strategy — Turning traffic into predictable pipeline</p>
+  <header>
+    <div class="brand">
+      <div class="logo">TB</div>
+      <div>
+        <h1>Thabo Bhebhe</h1>
+        <p class="lead">Performance Marketing • SEO • Content Strategy — Turning traffic into predictable pipeline</p>
+      </div>
     </div>
-  </div>
-  <div class="contact">
-    <a class="contact-link" href="mailto:thabobhebhe@aol.com">Email</a>
-    <a class="contact-link" href="https://linkedin.com/in/thabobhebhe" target="_blank">LinkedIn</a>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="card hero-left fade">
-    <h2>Strategic marketing that ties content, SEO and paid media to revenue</h2>
-    <p>I build and run data-driven growth systems for SaaS, B2B tech and consumer brands — combining technical SEO, conversion-led content and full-funnel paid acquisition to deliver measurable ROI.</p>
-    <div class="badges">
-      <div class="badge">10+ years</div>
-      <div class="badge">GA4 • Ahrefs • SEMrush</div>
-      <div class="badge">HubSpot Certified</div>
+    <div class="contact">
+      <a class="contact-link" href="mailto:thabobhebhe@aol.com">Email</a>
+      <a class="contact-link" href="https://linkedin.com/in/thabobhebhe" target="_blank">LinkedIn</a>
     </div>
-    <div class="metrics">
-      <div class="metric"><strong>120%</strong><span>Avg organic growth (18 months)</span></div>
-      <div class="metric"><strong>4x</strong><span>Avg PPC ROI</span></div>
-      <div class="metric"><strong>85%</strong><span>Social engagement lift</span></div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="card hero-left">
+      <h2>Strategic marketing that ties content, SEO and paid media to revenue</h2>
+      <p>I build and run data-driven growth systems for SaaS, B2B tech and consumer brands — combining technical SEO, conversion-led content, and full-funnel paid acquisition to deliver measurable ROI.</p>
+
+      <div class="badges">
+        <div class="badge">10+ years</div>
+        <div class="badge">GA4 • Ahrefs • SEMrush</div>
+        <div class="badge">HubSpot Certified</div>
+      </div>
+
+      <div class="metrics">
+        <div class="metric"><strong class="count" data-target="120">0</strong><span>Avg organic growth (18 months)</span></div>
+        <div class="metric"><strong class="count" data-target="4">0</strong><span>Avg PPC ROI</span></div>
+        <div class="metric"><strong class="count" data-target="85">0</strong><span>Social engagement lift</span></div>
+      </div>
+
+      <div style="margin-top:18px">
+        <a class="cta-btn" href="mailto:thabobhebhe@aol.com?subject=Portfolio inquiry - Free Growth Audit">Book a Free Growth Audit</a>
+      </div>
     </div>
-    <a class="cta-btn" href="mailto:thabobhebhe@aol.com?subject=Portfolio inquiry - Free Growth Audit">Book a Free Growth Audit</a>
-    <a class="show-more" href="#case-studies">See case studies ↓</a>
-  </div>
 
-  <aside class="card hero-right fade">
-    <strong style="color:#fff">Quick Snapshot</strong>
-    <span style="color:var(--muted)">Services: Paid Media • SEO • Content • Lead Gen</span>
-    <span style="color:var(--muted);font-size:13px">Typical client budget: R50k — R500k+ / month</span>
-    <a class="cta-btn" href="mailto:thabobhebhe@aol.com?subject=Book a call">Engage Thabo</a>
-  </aside>
-</section>
+    <aside class="card hero-right">
+      <div class="contact-card">
+        <strong>Quick Snapshot</strong>
+        <span style="color:var(--muted)">Services: Paid Media • SEO • Content • Lead Gen</span>
+        <span style="color:var(--muted); font-size:13px">Typical client budget: R50k — R500k+ / month</span>
 
-<section class="section">
-  <h3>What I Do — Service Pillars</h3>
-  <div class="services-grid fade">
-    <div class="service">
-      <h4>Paid Media & Lead Gen</h4>
-      <p>Strategic full-funnel campaigns across Google, Meta and LinkedIn with rigorous testing and CRO built into every step — focused on lowering CPA and scaling pipeline.</p>
+        <div style="margin-top:12px">
+          <a class="cta-btn" href="mailto:thabobhebhe@aol.com?subject=Engage Thabo">Engage Thabo</a>
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section">
+    <h3>What I Do — Service Pillars</h3>
+    <div class="services-grid">
+      <div class="service">
+        <h4>Paid Media & Lead Gen</h4>
+        <p>Full-funnel campaigns across Google, Meta and LinkedIn with rigorous testing and CRO built into every step — focused on lowering CPA and scaling pipeline.</p>
+      </div>
+      <div class="service">
+        <h4>Technical & Local SEO</h4>
+        <p>Comprehensive audits, crawl fixes, schema, site architecture and on-page optimisation to unlock compounding organic growth for B2B and e-commerce sites.</p>
+      </div>
+      <div class="service">
+        <h4>Content Strategy & Copy</h4>
+        <p>SEO-first long-form content, product & landing-page copy, and short-form social copy that converts and builds brand authority. Experienced in transforming social content into news articles and case studies for corporate brands (e.g., Coca-Cola PenBev, MTNmore).</p>
+      </div>
     </div>
-    <div class="service">
-      <h4>Technical & Local SEO</h4>
-      <p>Comprehensive audits, crawl fixes, schema, site architecture and on-page optimisation to unlock compounding organic growth for B2B and e-commerce sites.</p>
+  </section>
+
+  <!-- INTERACTIVE CASE STUDIES TABS -->
+  <section class="section">
+    <h3>Case Studies</h3>
+    <div class="tabs">
+      <div class="tab active" data-target="promoflo">Promoflo Campaigns</div>
+      <div class="tab" data-target="featured">Featured Case Studies</div>
+      <div class="tab" data-target="mtnmore">MTNmore Consumer Engagement</div>
     </div>
-    <div class="service">
-      <h4>Content Strategy & Copy</h4>
-      <p>SEO-first long-form content, product & landing-page copy, and short-form social copy that converts and builds brand authority. Experienced in transforming social content into news and case studies for corporate brands (e.g., Coca-Cola PenBev, MTNmore).</p>
+
+    <div id="promoflo" class="tab-content">
+      <p>I wrote Promoflo's service pages and campaign content, transforming technical platform offerings into compelling copy to drive product adoption and lead generation. The narrative highlights campaign challenges, strategic execution, and measurable outcomes.</p>
     </div>
-  </div>
-</section>
 
-<section class="section promoflo fade">
-  <div class="card">
-    <h3 style="margin-top:0">Promoflo — Content & Campaign Copy (Selected)</h3>
-    <p style="color:var(--muted)">Concise outputs to support product adoption and commercial pitches: service pages, campaign flows, and conversion-first benefit copy.</p>
-    <div class="pf-list">
-      <div class="pf-item"><h5>Deal Swiper</h5><p>Gamified deal discovery — increases session time and drive-to-purchase via integrated purchase links and social sharing.</p></div>
-      <div class="pf-item"><h5>Predict & Win</h5><p>Prediction games to drive repeat visits and loyalty for sports and entertainment advertisers.</p></div>
-      <div class="pf-item"><h5>UGC Campaigns</h5><p>User-generated content mechanics that fuel authentic social proof and referral growth while capturing first-party data for remarketing.</p></div>
+    <div id="featured" class="tab-content hidden">
+      <div class="case-grid">
+        <article class="case">
+          <h4>Out of the Box Ideas — Organic Growth</h4>
+          <div class="role">Role: SEO & Content Lead — Long-form pillar content, on-page SEO</div>
+          <ul>
+            <li>Wrote and optimised long-form e-commerce pillar content (2,000+ words)</li>
+            <li>Resolved keyword cannibalisation and improved internal linking</li>
+          </ul>
+          <div class="result">Result: +120% organic traffic over 18 months; multiple #1 and Top-5 keyword rankings</div>
+        </article>
+
+        <article class="case">
+          <h4>Internet Express — Paid Acquisition (2016–2019)</h4>
+          <div class="role">Role: Paid Media Strategist — Google & Facebook Ads</div>
+          <ul>
+            <li>Full-funnel campaigns focused on conversion optimisation and audience layering</li>
+            <li>Structured retargeting flows tied to dynamic offers and promos</li>
+          </ul>
+          <div class="result">Result: 4x ROI, −38% CPA, +220% form conversions on R250k monthly budgets</div>
+        </article>
+
+        <article class="case">
+          <h4>Varibox — Technical Content & Linkbuilding</h4>
+          <div class="role">Role: Technical Content & Outreach</div>
+          <ul>
+            <li>Created compliance, safety and technical blog articles targeting niche industrial keywords</li>
+            <li>Secured backlinks via trade publications and partner content</li>
+          </ul>
+          <div class="result">Result: Improved organic impressions and backlink quality; increased targeted leads from organic channels</div>
+        </article>
+
+        <article class="case">
+          <h4>Coca-Cola PenBev — News & Social Content</h4>
+          <div class="role">Role: Content & Copywriting — News updates, social-to-news repurposing</div>
+          <ul>
+            <li>Write timely news articles on latest beverage sector developments</li>
+            <li>Repurpose social copy into engaging news content with SEO alignment</li>
+            <li>Collaborate with marketing teams to highlight campaigns and initiatives</li>
+          </ul>
+          <div class="result">Result: Strengthened brand authority and engagement; improved on-site traffic and audience retention</div>
+        </article>
+      </div>
     </div>
-    <p style="margin-top:12px;color:var(--muted)">Sample outputs: service pages, campaign flows, benefit copy, FAQs and SEO metadata. <a href="https://www.promoflo.com/index/advertiser-blog-home" target="_blank" style="color:var(--accent)">View live pages</a></p>
-    <a class="cta-btn" href="mailto:thabobhebhe@aol.com?subject=Promoflo Case Notes">Request Promoflo Case Notes</a>
-  </div>
-</section>
 
-<section id="case-studies" class="section fade">
-  <h3>Featured Case Studies</h3>
-  <div class="case-grid">
-
-    <article class="case card">
-      <h4>Out of the Box Ideas — Organic Growth</h4>
-      <div class="role">Role: SEO & Content Lead — Long-form pillar content, on-page SEO</div>
-      <ul>
-        <li>Wrote and optimised long-form e-commerce pillar content (2,000+ words)</li>
-        <li>Resolved keyword cannibalisation and improved internal linking</li>
-      </ul>
-      <div class="result">Result: +120% organic traffic over 18 months; multiple #1 and Top-5 keyword rankings. outoftheboxideas.co.za</div>
-    </article>
-
-    <article class="case card">
-      <h4>Internet Express — Paid Acquisition (2016–2019)</h4>
-      <div class="role">Role: Paid Media Strategist — Google & Facebook Ads</div>
-      <ul>
-        <li>Full-funnel campaigns focused on conversion optimisation and audience layering</li>
-        <li>Structured retargeting flows tied to dynamic offers and promos</li>
-      </ul>
-      <div class="result">Result (2016–2019): 4x ROI, −38% CPA, +220% form conversions on R250k monthly budgets</div>
-    </article>
-
-    <article class="case card">
-      <h4>Varibox — Technical Content & Linkbuilding</h4>
-      <div class="role">Role: Technical Content & Outreach</div>
-      <ul>
-        <li>Created compliance, safety and technical blog articles targeting niche industrial keywords</li>
-        <li>Secured niche backlinks via trade publications and partner content</li>
-      </ul>
-      <div class="result">Result: Improved organic impressions and backlink quality; increased targeted leads from organic channels</div>
-    </article>
-
-    <article class="case card">
-      <h4>Coca-Cola PenBev — News & Social Content</h4>
-      <div class="role">Role: Content & Copywriting — News updates, social-to-news repurposing</div>
-      <ul>
-        <li>Write timely news articles on the latest developments in the beverage sector for Coca-Cola PenBev’s news portal</li>
-        <li>Repurpose social media copy into engaging news content, ensuring brand voice consistency and SEO alignment</li>
-        <li>Collaborate with marketing teams to highlight product campaigns and sustainability initiatives</li>
-      </ul>
-      <div class="result">Result: Strengthened on-site authority and engagement; improved audience retention through timely, high-quality copy</div>
-    </article>
-
-    <article class="case card">
-      <h4>MTNmore — Consumer Engagement Case Studies & Content</h4>
-      <div class="role">Role: Case Study & Content Writer — MTNmore insights and campaign writeups</div>
-      <ul>
-        <li>Produced case study writeups and thought pieces showcasing campaign outcomes and creative mechanics for MTNmore clients.</li>
-        <li>Transformed campaign results and short-form social copy into SEO-friendly case studies and blog posts.</li>
-        <li>Examples: Shell Valentines Promo, Jude Color Women’s Month Promotion, Royal Suites Hotel Valentines Promo, Fresh Minute Maid, UMCAT Youth Promotion, Unilever Home Event Gamification</li>
-      </ul>
-      <div class="result">Result: Clear, SEO-aligned documentation of MTNmore campaigns supporting audience engagement, lead capture, and commercial adoption.</div>
-    </article>
-
-    <article class="case card">
-      <h4>ClickPulse — Technical SEO & LinkedIn Ads</h4>
-      <div class="role">Role: Technical SEO & B2B Paid Media</div>
-      <ul>
-        <li>Technical site audits, schema, crawl optimisation</li>
-        <li>LinkedIn lead-gen campaigns targeting senior decision-makers</li>
-      </ul>
-      <div class="result">Result: Stronger SERP presence for technical queries and qualified MQLs from LinkedIn campaigns</div>
-    </article>
-
-    <article class="case card">
-      <h4>MTN Ads Business Directory — Content Moderation & Platform Oversight</h4>
-      <div class="role">Role: Directory Content Moderator</div>
-      <ul>
-        <li>Moderate MTN Ads business directory — ensuring business listings meet content standards</li>
-        <li>Optimising descriptions for discoverability, maintaining quality metadata across the platform</li>
-      </ul>
-      <div class="result">Result: Consistent high-quality directory content, improving user trust and discoverability</div>
-    </article>
-
-  </div>
-</section>
-
-<section class="section fade">
-  <h3>Skills, Tools & Certifications</h3>
-  <div class="chips">
-    <div class="chip">GA4 & Analytics</div>
-    <div class="chip">Ahrefs • SEMrush</div>
-    <div class="chip">HubSpot • CMS</div>
-    <div class="chip">Google Ads • Meta • LinkedIn</div>
-    <div class="chip">Schema & Technical SEO</div>
-    <div class="chip">Conversion Copywriting (CRO)</div>
-  </div>
-</section>
-
-<footer>
-  <div class="card" style="max-width:720px;margin:0 auto">
-    <h3 style="margin-top:0">Ready to grow your traffic, leads and revenue?</h3>
-    <p style="color:var(--muted)">I offer focused audits, campaign builds and retained growth partnerships. Book a free growth audit and I'll deliver a concise action plan you can implement immediately.</p>
-    <div style="margin-top:12px">
-      <a class="cta-btn" href="mailto:thabobhebhe@aol.com?subject=Free Growth Audit">Book a Free Growth Audit</a>
-      <a class="show-more" href="/Thabo_Bhebhe_Portfolio.pdf">Download PDF</a>
+    <div id="mtnmore" class="tab-content hidden">
+      <p><strong>Role:</strong> Content & Case Study Writer — MTNmore Consumer Engagement Campaigns</p>
+      <p>I created client-facing case studies for MTNmore campaigns, transforming campaign insights into persuasive narratives that helped convert prospects. Each case study followed <strong>Problem → Process → Solution → Outcome</strong> structure.</p>
+      <div class="case-grid">
+        <article class="case">
+          <h4>Shell Valentines, Jude Color, Royal Suites, Fresh Minute Maid, UMCAT, Unilever Home</h4>
+          <div class="role">Case Study Writer</div>
+          <p><strong>Problem:</strong> Brands needed to increase engagement, leads, and conversions through interactive campaigns.</p>
+          <p><strong>Process:</strong> Analyzed campaign mechanics, performance data, and user interactions, then crafted persuasive, client-facing narratives.</p>
+          <p><strong>Solution:</strong> Developed SEO-aligned, structured case studies highlighting campaign strategy, mechanics, and impact.</p>
+          <p><strong>Outcome:</strong> Demonstrated improvements in CTR, leads, community growth, and engagement—positioning MTNmore as a growth-enabling platform.</p>
+        </article>
+      </div>
     </div>
-  </div>
-  <p style="margin-top:12px;">© Thabo Bhebhe — Performance Marketing • Johannesburg</p>
-</footer>
+  </section>
+
+  <!-- SKILLS & CLIENTS -->
+  <section class="section">
+    <h3>Skills, Tools & Certifications</h3>
+    <div class="chips">
+      <div class="chip">GA4 & Analytics</div>
+      <div class="chip">Ahrefs • SEMrush</div>
+      <div class="chip">HubSpot • CMS</div>
+      <div class="chip">Google Ads • Meta • LinkedIn</div>
+      <div class="chip">Schema & Technical SEO</div>
+      <div class="chip">Conversion Copywriting (CRO)</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h3>Client Names & Partnerships</h3>
+    <div class="chips">
+      <div class="chip">Promoflo</div>
+      <div class="chip">Internet Express</div>
+      <div class="chip">Varibox</div>
+      <div class="chip">Out of the Box Ideas</div>
+      <div class="chip">ClickPulse</div>
+      <div class="chip">Coca-Cola PenBev</div>
+      <div class="chip">MTNmore</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="card" style="max-width:720px; margin:0 auto;">
+      <h3>Ready to grow your traffic, leads, and revenue?</h3>
+      <p>I offer focused audits, campaign builds, and retained growth partnerships. Book a free growth audit and I'll deliver a concise action plan you can implement immediately.</p>
+      <div style="margin-top:12px;">
+        <a class="cta-btn" href="mailto:thabobhebhe@aol.com?subject=Free Growth Audit">Book a Free Growth Audit</a>
+      </div>
+    </div>
+    <p style="margin-top:12px;">© Thabo Bhebhe — Performance Marketing • Johannesburg</p>
+  </footer>
+</div>
 
 <script>
-const faders = document.querySelectorAll('.fade');
-const options = {threshold:0.1};
-const appearOnScroll = new IntersectionObserver(function(entries, observer){
+// Fade-in animation
+const cards = document.querySelectorAll('.card');
+const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if(entry.isIntersecting){entry.target.classList.add('fade-in');observer.unobserve(entry.target);}
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
   });
-}, options);
-faders.forEach(fader => appearOnScroll.observe(fader));
-</script>
+},{threshold:0.2});
+cards.forEach(card => observer.observe(card));
 
-</div>
+// Tabs functionality
+const tabs = document.querySelectorAll('.tab');
+const tabContents = document.querySelectorAll('.tab-content');
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    const target = tab.dataset.target;
+    tabContents.forEach(tc => tc.classList.add('hidden'));
+    document.getElementById(target).classList.remove('hidden');
+  });
+});
+
+// Animated KPI counters
+const counters = document.querySelectorAll('.count');
+const speed = 50; // lower is faster
+counters.forEach(counter => {
+  const updateCount = () => {
+    const target = +counter.getAttribute('data-target');
+    const count = +counter.innerText;
+    const increment = target / speed;
+    if(count < target){
+      counter.innerText = Math.ceil(count + increment);
+      setTimeout(updateCount, 30);
+    } else {
+      counter.innerText = target;
+    }
+  };
+  const kpiObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        updateCount();
+        kpiObserver.unobserve(counter);
+      }
+    });
+  }, {threshold:0.5});
+  kpiObserver.observe(counter);
+});
+</script>
 </body>
 </html>
